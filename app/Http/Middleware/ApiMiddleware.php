@@ -19,8 +19,8 @@ class ApiMiddleware
         //COMPROVAR SI EL USUARIO ESTA IDENTIFICADO
 
          //recogemos token de autorizacion
-         //$token = $request ->header('Authorization');
-        $token = $request->bearerToken();
+         $token = $request ->header('Authorization');
+        //$token = $request->bearerToken();
         //intanciamos objeto
         $jwtAuth = new JwtAuth();
         //chequeamos si el token es correcto o no

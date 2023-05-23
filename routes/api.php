@@ -23,7 +23,8 @@ use App\Http\Middleware\ApiMiddleware;
 //Rutas Usuario
 //Route::post('login', 'UserController@login');
 Route::post('login', [UserController::class, 'login']);
-Route::get('user', [UserController::class, 'listar'])->middleware(ApiMiddleware::class);
+Route::get('user', [UserController::class, 'listar']);//->middleware(ApiMiddleware::class);
+Route::get('userinactivos', [UserController::class, 'listarInactivos']);
 Route::post('register', [UserController::class, 'register'])->middleware(ApiMiddleware::class);
 
 
