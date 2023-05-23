@@ -15,7 +15,7 @@ class UserController extends Controller
     public function listar()
     {
         //return "Accion de pruebas controlador USER-LISTAR";
-        $user = user::select('Nombres','Apellidos','email','Estado')->where("Estado", '=', 1)->get();
+        $user = user::select('Nombres','Apellidos','email','Estado')->where("Estado", '=', 0)->get();
 
         return response()->json([
             'code' => 200,
@@ -28,7 +28,7 @@ class UserController extends Controller
     public function listarInactivos()
     {
         //return "Accion de pruebas controlador USER-LISTAR";
-        $user = user::select('Nombres','Apellidos','email','Estado')->where("Estado", '=', 2)->get();
+        $user = user::select('Nombres','Apellidos','email','Estado')->where("Estado", '=', 1)->get();
 
         return response()->json([
             'code' => 200,
